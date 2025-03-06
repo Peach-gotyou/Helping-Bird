@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="quizstyle.css">
+</head>
+<body>
+    <div id="home">
+        <h1>Select a Subject</h1>
+        <select id="subject">
+            <option value="research">Research</option>
+            <option value="physical_education">Physical Education</option>
+            <option value="reading_writing">Reading and Writing</option>
+            <option value="general_math">General Mathematics</option>
+            <option value="calculus">Calculus</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="creative_writing">Creative Writing</option>
+            <option value="creative_nonfiction">Creative Nonfiction</option>
+            <option value="philippine_politics">Philippine Politics and Governance</option>
+            <option value="contemporary_arts">Contemporary Arts</option>
+            <option value="philosophy">Philosophy</option>
+        </select>
+        <button onclick="selectDifficulty()">Next</button>
+    </div>
+    
+    <div id="difficulty" style="display: none;">
+        <h1>Select Difficulty</h1>
+        <button onclick="startQuiz('easy')">Easy (10 Questions)</button>
+        <button onclick="startQuiz('medium')">Medium (50 Questions)</button>
+        <button onclick="startQuiz('hard')">Hard (100 Questions)</button>
+    </div>
+    
+    <div id="quiz" style="display: none;">
+        <h1 id="question-text"></h1>
+        <div id="options"></div>
+        <button onclick="nextQuestion()">Next</button>
+    </div>
+    
+    <div id="results" style="display: none;">
+        <h1>Quiz Results</h1>
+        <div id="result-details"></div>
+        <button onclick="restartQuiz()">Try Again</button>
+    </div>
+    
+    <script src="quizscript.js"></script>
+</body>
+</html>
